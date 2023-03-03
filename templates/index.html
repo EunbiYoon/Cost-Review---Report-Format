@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css',_external=True) }}">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="../static/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h3>Dear all,
+            <br/><br/>Here is the Cost Review Report for {{ week_num }} week of February.
+            <br/><br/>Thanks, 
+        </h3>
+
+        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+
+        <div class="tableleft">
+            <h3>Material Cost Trend BPA - Front Loader</h3>
+            <h5>{{ FL_Graph|safe }}</h5>
+        </div>
+        <div class="tableright">
+            <h3>VI Items - Front Loader</h3>
+            <h5>{{ FL_VI|safe }}</h5>
+        </div>  
+
+
+    </div>
+</body>
