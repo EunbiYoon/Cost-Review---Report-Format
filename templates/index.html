@@ -26,24 +26,22 @@
                 axisY:{
                     gridThickness: 0
                 },
-                data: [{        
+                axisX:{
+                    interval: 0.01
+                },
+                data: [
+                {        
                     type: "line",
                         indexLabelFontSize: 16,
-                    dataPoints: [
-                        { y: 450 },
-                        { y: 414},
-                        { y: 520},
-                        { y: 460 },
-                        { y: 450 },
-                        { y: 500 },
-                        { y: 480 },
-                        { y: 480 },
-                        { y: 410},
-                        { y: 500 },
-                        { y: 480 },
-                        { y: 510 }
-                    ]
-                }]
+                        dataPoints: [
+                            { x:23.01, y: 414},
+                            { x:23.02, y: 520},
+                            { x:23.03, y:460 },
+                            { x:23.04, y:400 },
+                        ]
+                },
+                
+                ]
             });
             chart.render();
                             

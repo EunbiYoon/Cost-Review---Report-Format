@@ -51,7 +51,7 @@ def index():
         html=render_template('index.html',FL_Graph=FL_Graph, TL_Graph=TL_Graph, DR_Graph=DR_Graph, FL_VI=FL_VI, TL_VI=TL_VI, DR_VI=DR_VI,week_num=week_num)
     )
     #send mail
-    # mail.send(msg)
+    mail.send(msg)
 
     # return 
     return render_template('index.html',FL_Graph=FL_Graph, TL_Graph=TL_Graph, DR_Graph=DR_Graph, FL_VI=FL_VI, TL_VI=TL_VI, DR_VI=DR_VI,week_num=week_num)
