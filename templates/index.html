@@ -7,7 +7,10 @@
     <title>Document</title>
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css',_external=True) }}">
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script src="../static/chart.js"></script>
+    <style>
+		.canvasjs-chart-credit{display:none !important;}
+		.row > div{margin-top:20px;}
+	</style>
 </head>
 <body>
     <div class="container">
@@ -15,7 +18,43 @@
             <br/><br/>Here is the Cost Review Report for {{ week_num }} week of February.
             <br/><br/>Thanks, 
         </h3>
-
+        <script>
+            window.onload = function () {
+            
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                theme: "light1",
+                title:{
+                    text: "Simple Line Chart"
+                },
+                axisY:{
+                    gridThickness: 0
+                },
+                data: [{        
+                    type: "line",
+                        indexLabelFontSize: 16,
+                    dataPoints: [
+                        { y: 450 },
+                        { y: 414},
+                        { y: 520},
+                        { y: 460 },
+                        { y: 450 },
+                        { y: 500 },
+                        { y: 480 },
+                        { y: 480 },
+                        { y: 410},
+                        { y: 500 },
+                        { y: 480 },
+                        { y: 510 }
+                    ]
+                }]
+            });
+            chart.render();
+                            
+            }
+        </script>
+        
+       
         <div id="chartContainer" style="height: 370px; width: 100%;"></div>
 
         <div class="tableleft">
@@ -25,8 +64,7 @@
         <div class="tableright">
             <h3>VI Items - Front Loader</h3>
             <h5>{{ FL_VI|safe }}</h5>
-        </div>  
-
+        </div> 
 
     </div>
 </body>

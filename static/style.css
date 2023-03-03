@@ -5,17 +5,20 @@
     align-items: center;
     height: 100%;
 }
-
+.canvasjs-chart-credit
+{
+    display: none !important;
+}
 
 .tableleft{
     text-align: center;
-    width: 50%;
+    width: 60%;
     float: left;
 }
 
 .tableright{
     text-align: center;
-    width: 50%;
+    width: 40%;
     float: right;
 }
 
